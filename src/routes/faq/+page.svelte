@@ -1,47 +1,27 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import FaqContent from '$lib/content/faq.md';
 	
-	// Store for expanded state of each FAQ item
-	const faqItems = $state([]);
-	
-	// Process the FAQ content once mounted
 	onMount(() => {
-		// Set a small delay to ensure the FAQ content is rendered
-		setTimeout(() => {
-			// Find all h3 headings (questions) from the rendered FAQ content
-			const faqContainer = document.querySelector('.faq-content');
-			if (faqContainer) {
-				const questions = faqContainer.querySelectorAll('h3');
-				
-				// Initialize the state array with all items collapsed
-				for (let i = 0; i < questions.length; i++) {
-					const question = questions[i];
-					const answer = question.nextElementSibling;
-					
-					// Add item to state
-					faqItems.push({ 
-						question: question.textContent, 
-						answer: answer ? answer.outerHTML : '', 
-						expanded: false 
-					});
-					
-					// Remove the original elements as we'll render our own
-					if (question.parentNode) {
-						question.parentNode.removeChild(question);
-						if (answer && answer.parentNode) {
-							answer.parentNode.removeChild(answer);
-						}
-					}
-				}
+		// Convert markdown h3/p pairs to details/summary elements
+		document.querySelectorAll('.faq-content h3').forEach(h3 => {
+			const p = h3.nextElementSibling;
+			const details = document.createElement('details');
+			const summary = document.createElement('summary');
+			
+			// Move content from h3 to summary
+			summary.innerHTML = h3.innerHTML;
+			
+			// Wrap in details/summary
+			details.appendChild(summary);
+			if (p) {
+				details.appendChild(p.cloneNode(true));
+				p.remove();
 			}
-		}, 100);
+			
+			h3.parentNode?.replaceChild(details, h3);
+		});
 	});
-	
-	// Toggle FAQ item expanded state
-	function toggleFaq(index) {
-		faqItems[index].expanded = !faqItems[index].expanded;
-	}
 </script>
 
 <div class="prose max-w-none">
@@ -49,35 +29,43 @@
 	
 	<p class="mb-6">Below are some common questions about our services and products.</p>
 	
-	<!-- Hidden div that will hold the initial markdown content for processing -->
-	<div class="faq-content hidden">
+	<div class="faq-content">
 		<FaqContent />
-	</div>
-	
-	<!-- Render FAQ items as collapsible sections -->
-	<div class="space-y-4">
-		{#each faqItems as item, i}
-			<div class="border rounded-lg overflow-hidden">
-				<button 
-					class="w-full text-left p-4 bg-gray-50 flex justify-between items-center"
-					on:click={() => toggleFaq(i)}
-				>
-					<span class="font-medium">{item.question}</span>
-					<span>{item.expanded ? '−' : '+'}</span>
-				</button>
-				
-				{#if item.expanded}
-					<div class="p-4 bg-white" >
-						{@html item.answer}
-					</div>
-				{/if}
-			</div>
-		{/each}
 	</div>
 </div>
 
 <style>
-	.hidden {
-		display: none;
+	:global(.faq-content details) {
+		margin-bottom: 0.5rem;
+	}
+	
+	:global(.faq-content summary) {
+		cursor: pointer;
+		padding: 1rem;
+		background-color: rgb(249, 250, 251);
+		border: 1px solid rgb(229, 231, 235);
+		border-radius: 0.5rem;
+		font-weight: 500;
+		list-style: none;
+	}
+	
+	:global(.faq-content summary::after) {
+		content: '+';
+		float: right;
+		font-size: 1.25rem;
+		font-weight: 300;
+	}
+	
+	:global(.faq-content details[open] summary::after) {
+		content: '−';
+	}
+	
+	:global(.faq-content details > p) {
+		padding: 1rem;
+		border: 1px solid rgb(229, 231, 235);
+		border-top: none;
+		border-radius: 0 0 0.5rem 0.5rem;
+		margin-top: -0.5rem;
+		margin-bottom: 1rem;
 	}
 </style>
