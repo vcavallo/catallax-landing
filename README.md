@@ -1,38 +1,43 @@
-# sv
+# Catallax Landing Page
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Website for the coordinating and communicating the Catallax project.
 
-## Creating a project
+## Setup Instructions
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. Make sure you have Node.js (v16+) and npm (v7+) or yarn (v1.22+) installed
+2. Clone this repository
+3. Install dependencies:
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+yarn install
 ```
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start the development server:
 
 ```bash
-npm run dev
+yarn dev
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+yarn dev --open
 ```
 
 ## Building
 
-To create a production version of your app:
+To create a production version of the site:
 
 ```bash
-npm run build
+yarn build
 ```
 
-You can preview the production build with `npm run preview`.
+You can preview the production build with `yarn preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Troubleshooting
+
+If you encounter issues after deleting `node_modules` or during installation:
+
+```bash
+# Clean install dependencies 
+yarn install --force
+```
