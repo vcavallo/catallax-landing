@@ -21,7 +21,7 @@
 		<div class="container mx-auto px-4">
 			<div class="flex justify-between items-center">
 				<div class="flex flex-row gap-4">
-	        <div><a href="/" class="hover:underline">Home</a></div>
+	        <div><a href="/" class="hover:underline">Catallax</a></div>
 					<div><a href="/get-involved" class="hover:underline">Get Involved</a></div>
 					<div><a href="/faq" class="hover:underline">FAQ</a></div>
 				</div>

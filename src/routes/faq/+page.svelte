@@ -24,7 +24,7 @@
 	});
 </script>
 
-<div class="prose max-w-none">
+<div class="prose dark:prose-invert max-w-none">
 	<h1 class="text-3xl font-bold mb-6">Frequently Asked Questions</h1>
 	
 	<p class="mb-6">Below are some common questions about our services and products.</p>
