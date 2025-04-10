@@ -19,17 +19,28 @@
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
 	}
+
+	function closeMenu() {
+    isMenuOpen = false;
+	}
 </script>
 
 <div class="dark:prose-invert min-h-screen">
-	<nav class="py-4 border-b">
+	<nav class="py-4 border-b sticky top-0 dark:bg-stone-900 bg-white shadow-md">
 		<div class="container mx-auto px-4">
 			<div class="flex justify-between items-center">
-				<div><a href="/" class="text-lg font-semibold hover:underline">Catallax</a></div>
+        <a href="/" onclick={closeMenu} class="text-lg font-semibold hover:underline">
+          <div class="flex items-center">
+            <div>
+              <img src="https://vcavallo.nyc3.cdn.digitaloceanspaces.com/images/catallax-logo-1-transparent.png" height="35" width="35">
+            </div>
+            Catallax
+          </div>
+        </a>
 				
 				<!-- Mobile menu button -->
 				<button 
-					class="md:hidden flex items-center p-2" 
+					class="md:hidden flex items-center p-2 cursor-pointer" 
 					onclick={toggleMenu}
 					aria-label="Toggle menu"
 				>
@@ -49,9 +60,9 @@
 				</button>
 				
 				<!-- Desktop navigation -->
-				<div class="hidden md:flex flex-row gap-4">
+				<div class="hidden md:flex justify-center flex-row gap-8">
+					<div><a href="/how-it-works" class="hover:underline">How it Works</a></div>
 					<div><a href="/get-involved" class="hover:underline">Contribute</a></div>
-					<div><a href="/how-it-works" class="hover:underline">Works</a></div>
 					<div><a href="/faq" class="hover:underline">FAQ</a></div>
 				</div>
 				
@@ -65,14 +76,14 @@
 			
 			<!-- Mobile navigation -->
 			{#if isMenuOpen}
-				<div class="md:hidden mt-4 pb-2">
+				<div class="md:hidden mt-4 pb-2 justify-end text-right">
 					<div class="flex flex-col space-y-2">
-						<a href="/get-involved" class="py-1 hover:underline">Contribute</a>
-						<a href="/how-it-works" class="py-1 hover:underline">Works</a>
-						<a href="/faq" class="py-1 hover:underline">FAQ</a>
+            <a href="/how-it-works" onclick={toggleMenu} class="py-1 hover:underline">How it Works</a>
+						<a href="/get-involved" onclick={toggleMenu} class="py-1 hover:underline">Contribute</a>
+            <a href="/faq" onclick={toggleMenu} class="py-1 hover:underline">FAQ</a>
 						
-						<div class="pt-2 border-t mt-2">
-							<label class="flex items-center cursor-pointer">
+						<div class="pt-2 border-t mt-2 pt-4 justify-end text-right">
+							<label class="flex cursor-pointer justify-end">
 								<input type="checkbox" bind:checked={isDarkMode} class="" onchange={toggleDarkMode}>
 								<span class="ml-3 text-sm font-medium">Dark Mode</span>
 							</label>

@@ -118,4 +118,8 @@ h3.font-bold {
 	font-weight: 600;
 }
 
+a {
+	cursor: pointer;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));

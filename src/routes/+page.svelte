@@ -12,6 +12,9 @@
     <h2 class="text-2xl text-center mt-0">
       Everyone wins.
     </h2>
+    <div class="w-40 h-40 mx-auto">
+      <img src="https://vcavallo.nyc3.cdn.digitaloceanspaces.com/images/catallax-logo-1-transparent.png" />
+    </div>
   </header>
 	
 	<main class="my-10 prose mx-auto prose-lg dark:prose-invert">
