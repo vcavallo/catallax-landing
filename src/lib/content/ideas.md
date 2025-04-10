@@ -5,10 +5,13 @@
 - [ ] Create a github project and include it here via api integration
 - [ ] Include "citations" from Anarchy State and Utopia, David Friedman, etc. - explain that this project is informed by ancap literature
 - [ ] include "follow me on nostr" link
+- [ ] include importance of pseudonymity
 
 # Questions being explored
 
-- Should the cashu
+- Should the cashu mint be with the relay/"instance" or the escrow arbiter?
+- is cashu a fallback from lighting, or the only option?
+- can a patron choose a different mint or have to use the arbiter's (or relay's...) mint?
 
 ## Drafts
 
