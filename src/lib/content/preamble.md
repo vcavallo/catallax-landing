@@ -5,6 +5,8 @@ Thanks to [Cashu-based wallets](https://github.com/nostr-protocol/nips/blob/mast
 
 All you need is a web browser.
 
+Catallax is a protocol, not a platform. This site acts as a schelling point to coordinate and explain the system, but doesn't provide the service itself nor does the author take any fees. It's up to market actors to participate in the protocol.
+
 ---
 
 **This site is actively being developed. Everything below here is a collection of drafts and TODOs that will be incorporated very soon**
