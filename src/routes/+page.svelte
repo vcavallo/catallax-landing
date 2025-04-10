@@ -1,7 +1,13 @@
 <script lang="ts">
 	import Ideas from '$lib/content/ideas.md';
 	import Preamble from '$lib/content/preamble.md';
+	import SEO from '$lib/components/SEO.svelte';
 </script>
+
+<SEO 
+  title="Catallax - A Protocol for Pseudonymous Contractor Economies"
+  description="The Catallax network is an open protocol that enables pseudonymous contractor economies for services"
+/>
 
 <div class="max-w-none">
   <header class="mx-auto container max-w-4xl">

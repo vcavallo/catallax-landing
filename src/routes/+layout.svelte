@@ -2,6 +2,7 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
+	import SEO from '$lib/components/SEO.svelte';
 	
 	let { children } = $props();
 	let isDarkMode = $state(true);
@@ -24,6 +25,8 @@
     isMenuOpen = false;
 	}
 </script>
+
+<SEO />
 
 <div class="dark:prose-invert min-h-screen">
 	<nav class="py-4 border-b sticky top-0 dark:bg-stone-900 bg-white shadow-md">

@@ -1,5 +1,12 @@
 <script lang="ts">
+  import SEO from '$lib/components/SEO.svelte';
 </script>
+
+<SEO 
+  title="How Catallax Works - Protocol Flow"
+  description="Learn how the Catallax protocol uses Nostr to enable pseudonymous contractor economies"
+  image="/success-flowchart.png"
+/>
 
 <header class="my-10">
   <h1 class="text-2xl">Protocol Flow</h1>

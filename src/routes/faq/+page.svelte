@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import FaqContent from '$lib/content/faq.md';
+	import SEO from '$lib/components/SEO.svelte';
 	
 	onMount(() => {
 		// Convert markdown h3/p pairs to details/summary elements
@@ -23,6 +24,11 @@
 		});
 	});
 </script>
+
+<SEO 
+  title="Catallax FAQ - Frequently Asked Questions" 
+  description="Get answers to common questions about the Catallax protocol for pseudonymous contractor economies"
+/>
 
 <main class="prose dark:prose-invert mx-auto">
 	<div class="faq-content">
