@@ -43,7 +43,7 @@
 	
 	<footer class="py-4 border-t">
 		<div class="container mx-auto px-4 text-center">
-			<p class='text-red-200'>Some footer</p>
+			<p class=''>catallax.network</p>
 		</div>
 	</footer>
 </div>
