@@ -4,20 +4,23 @@
 </script>
 
 <div class="max-w-none">
-  <header class="mt-5 mb-10">
-    <h1 class="not-prose text-4xl">The Catallax network is an open protocol that enables a pseudonymous contractor economy for any variety of service.</h1>
-    <blockquote>
-      Hayek derived the word <span class="not-italic">catallax</span> from the Greek verb <span class="not-italic">katallasso</span> (καταλλάσσω) which meant not only "to exchange" but also "to admit in the community" and "to change from enemy into friend"
-    </blockquote>
+  <header class="mx-auto container mt-20 mb-40 max-w-4xl">
+    <h1 class="text-5xl">The Catallax network is an open protocol that enables a pseudonymous contractor economy for services</h1>
   </header>
 	
-	<section class="my-10">
-		<Preamble />
-	</section>
+	<main class="my-10 prose mx-auto prose-lg dark:prose-invert">
+    <section>
+      <blockquote class="mb-20">
+        Hayek derived the word <span class="not-italic">catallax</span> from the Greek verb <span class="not-italic">katallasso</span> (καταλλάσσω) which meant not only "to exchange" but also "to admit in the community" and "to change from enemy into friend"
+      </blockquote>
+
+      <Preamble />
+    </section>
 	
-	<section class="mb-10">
-		<div class="">
-			<Ideas />
-		</div>
-	</section>
+    <section class="mb-10">
+      <div class="">
+        <Ideas />
+      </div>
+    </section>
+  </main>
 </div>

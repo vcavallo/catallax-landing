@@ -37,7 +37,7 @@
 	</nav>
 	
 
-	<main class="prose dark:prose-invert container mx-auto px-4 py-8">
+	<main class="container mx-auto px-4 py-8">
 		{@render children()}
 	</main>
 	

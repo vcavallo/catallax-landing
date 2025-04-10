@@ -2,10 +2,10 @@
 	import Contribute from '$lib/content/contribute.md';
 </script>
 
-<div class="">
+<main class="prose mx-auto dark:prose-invert">
 	<section class="mb-10">
 		<div class="">
 			<Contribute />
 		</div>
 	</section>
-</div>
+</main>

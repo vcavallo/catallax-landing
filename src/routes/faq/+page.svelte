@@ -24,11 +24,11 @@
 	});
 </script>
 
-<div class="prose dark:prose-invert max-w-none">
+<main class="prose dark:prose-invert mx-auto">
 	<div class="faq-content">
 		<FaqContent />
 	</div>
-</div>
+</main>
 
 <style>
 	:global(.faq-content details) {
