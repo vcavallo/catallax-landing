@@ -23,7 +23,7 @@ yarn dev
 yarn dev --open
 ```
 
-## Building
+## Build and deploy
 
 To create a production version of the site:
 
@@ -32,6 +32,10 @@ yarn build
 ```
 
 You can preview the production build with `yarn preview`.
+
+Deploy to the VPS (must add `sandbox` to ssh config):
+
+`yarn deploy`
 
 ## Troubleshooting
 
