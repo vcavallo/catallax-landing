@@ -99,9 +99,11 @@
 		{@render children()}
 	</main>
 	
-	<footer class="py-4 border-t">
-		<div class="container mx-auto px-4 text-center">
-			<p class=''>catallax.network</p>
+	<footer class="py-8 border-t">
+		<div class="prose dark:prose-invert container mx-auto px-4 text-center">
+      <blockquote>
+        Friedrich Hayek derived the word <span class="not-italic">catallax</span> from the Greek verb <span class="not-italic">katallasso</span> (καταλλάσσω) which meant not only "to exchange" but also "to admit in the community" and "to change from enemy into friend"
+      </blockquote>
 		</div>
 	</footer>
 </div>

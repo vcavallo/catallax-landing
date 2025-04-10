@@ -5,7 +5,7 @@ import mdsvexConfig from './mdsvex.config.js';
 
 const config = {
 	preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
-	kit: { 
+	kit: {
 		adapter: adapter(),
 		alias: {
 			$lib: './src/lib'
