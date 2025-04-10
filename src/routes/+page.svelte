@@ -4,8 +4,14 @@
 </script>
 
 <div class="max-w-none">
-  <header class="mx-auto container mt-20 mb-40 max-w-4xl">
-    <h1 class="text-5xl">The Catallax network is an open protocol that enables a pseudonymous contractor economy for services</h1>
+  <header class="mx-auto container mt-20 mb-30 max-w-4xl">
+    <h1 class="text-5xl leading-14 md:text-left text-center">The Catallax network is an open protocol that enables pseudonymous contractor economies for services</h1>
+    <h2 class="text-2xl text-center mt-10">
+      Patrons broadcast paid gigs<br/>Free Agents work jobs anonymously<br/>Arbiters hold funds in escrow and judge outcomes.
+    </h2>
+    <h2 class="text-2xl text-center mt-0">
+      Everyone wins.
+    </h2>
   </header>
 	
 	<main class="my-10 prose mx-auto prose-lg dark:prose-invert">
