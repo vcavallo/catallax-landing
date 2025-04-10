@@ -2,9 +2,9 @@
 
 # Ideas / WIP
 
-> "katallasso" (καταλλάσσω) which meant not only "to exchange" but also "to admit in the community" and "to change from enemy into friend."
+> **katallasso** (καταλλάσσω) which meant not only "to exchange" but also "to admit in the community" and "to change from enemy into friend."
 
-> "The advantage of a free market is that it allows millions of decision-makers to respond individually to freely determined prices, allocating resources - labor, capital and human ingenuity - in a manner that can't be mimicked by a central plan, however brilliant the central planner." 
+> The advantage of a free market is that it allows millions of decision-makers to respond individually to freely determined prices, allocating resources - labor, capital and human ingenuity - in a manner that can't be mimicked by a central plan, however brilliant the central planner.
 
 - [ ] Create a github project and include it here via api integration
 - [ ] Include "citations" from Anarchy State and Utopia, David Friedman, etc. - explain that this project is informed by ancap literature
