@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 /* Regular */
 @font-face {
@@ -118,3 +116,5 @@ h2.font-bold,
 h3.font-bold {
 	font-weight: 600;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
