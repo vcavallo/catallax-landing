@@ -42,7 +42,6 @@
 	:global(.faq-content summary) {
 		cursor: pointer;
 		padding: 1rem;
-		background-color: rgb(249, 250, 251);
 		border: 1px solid rgb(229, 231, 235);
 		border-radius: 0.5rem;
 		font-weight: 500;
@@ -62,10 +61,13 @@
 	
 	:global(.faq-content details > p) {
 		padding: 1rem;
-		border: 1px solid rgb(229, 231, 235);
 		border-top: none;
 		border-radius: 0 0 0.5rem 0.5rem;
 		margin-top: -0.5rem;
 		margin-bottom: 1rem;
+	}
+	
+	:global(.dark .faq-content details > p) {
+		border-color: rgb(75, 85, 99);
 	}
 </style>

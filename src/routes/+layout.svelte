@@ -1,3 +1,4 @@
+
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
@@ -15,7 +16,7 @@
 	}
 </script>
 
-<div class="min-h-screen">
+<div class="dark:prose-invert min-h-screen">
 	<nav class="py-4 border-b">
 		<div class="container mx-auto px-4">
 			<div class="flex justify-between items-center">
@@ -35,7 +36,8 @@
 		</div>
 	</nav>
 	
-	<main class="container mx-auto px-4 py-8">
+
+	<main class="prose dark:prose-invert container mx-auto px-4 py-8">
 		{@render children()}
 	</main>
 	

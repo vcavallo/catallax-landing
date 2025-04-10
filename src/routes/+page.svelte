@@ -2,7 +2,7 @@
 	import Ideas from '$lib/content/ideas.md';
 </script>
 
-<div class="prose max-w-none">
+<div class="max-w-none">
 	<h1 class="text-3xl mb-6">Catallax</h1>
   <h2 class="text-xl mb-6 font-bold">Value for Value <span class="italic">for Real</span></h2>
 	
@@ -13,7 +13,7 @@
 	
 	<section class="mb-10">
 		<h2 class="text-2xl mb-4">Welcome Content from Markdown</h2>
-		<div class="bg-gray-50 p-6 rounded-lg">
+		<div class="">
 			<Ideas />
 		</div>
 	</section>
