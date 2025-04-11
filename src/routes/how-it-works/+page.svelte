@@ -14,7 +14,7 @@
 <main class="mx-auto w-full">
 	<section class="mx-auto container prose dark:prose-invert my-10">
     <p>
-    Please refer to the spec for technical details (TODO: link forthcoming). Here we'll look at the general flow from a higher level with some details elided.
+    Please refer to the <a href="/nip">NIP</a> for technical details. Here we'll look at the general flow from a higher level with some details elided.
     </p>
     <h2 class="text-xl">The Happy Path</h2>
     <p>I hope you like flowcharts!</p>
