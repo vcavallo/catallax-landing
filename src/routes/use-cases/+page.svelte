@@ -12,11 +12,6 @@
   <h1 class="text-2xl">Example Use Cases</h1>
 </header>
 <main class="mx-auto container prose dark:prose-invert my-10">
-	<section class="">
-    <p>
-    Things
-    </p>
-  </section>
   <section>
       <UseCases />
   </section>

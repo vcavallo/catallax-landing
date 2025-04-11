@@ -63,8 +63,9 @@
 				</button>
 				
 				<!-- Desktop navigation -->
-				<div class="hidden md:flex justify-center flex-row gap-8">
+				<div class="hidden text-sm md:flex justify-center flex-row gap-8">
 					<div><a href="/how-it-works" class="hover:underline">How it Works</a></div>
+					<div><a href="/nip" class="hover:underline">NIP</a></div>
 					<div><a href="/use-cases" class="hover:underline">Use Cases</a></div>
 					<div><a href="/faq" class="hover:underline">FAQ</a></div>
 					<div><a href="/get-involved" class="hover:underline">Contribute</a></div>
@@ -83,6 +84,7 @@
 				<div class="md:hidden mt-4 pb-2 justify-end text-right">
 					<div class="flex flex-col space-y-2">
             <a href="/how-it-works" onclick={toggleMenu} class="py-1 hover:underline">How it Works</a>
+            <a href="/nip" onclick={toggleMenu} class="py-1 hover:underline">NIP</a>
             <a href="/use-cases" onclick={toggleMenu} class="py-1 hover:underline">Use Cases</a>
             <a href="/faq" onclick={toggleMenu} class="py-1 hover:underline">FAQ</a>
 						<a href="/get-involved" onclick={toggleMenu} class="py-1 hover:underline">Contribute</a>
