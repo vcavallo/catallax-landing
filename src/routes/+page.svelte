@@ -5,13 +5,13 @@
 </script>
 
 <SEO 
-  title="Catallax - A Protocol for Pseudonymous Contractor Economies"
-  description="The Catallax network is an open protocol that enables pseudonymous contractor economies for services"
+  title="Catallax - A Protocol for Pseudonymous Contract Work Economies"
+  description="Catallax is an open protocol that enables pseudonymous contract work economies. It runs over Nostr, Bitcoin and Cashu ecash for censorship-resistant communications and permissionless payments."
 />
 
 <div class="max-w-none">
   <header class="mx-auto container max-w-4xl">
-    <h1 class="text-5xl leading-14 md:text-left text-center my-20">The Catallax network is an open protocol that enables pseudonymous contractor economies for services</h1>
+    <h1 class="text-5xl leading-14 md:text-left text-center my-20">Catallax is an open protocol that enables pseudonymous contract work economies</h1>
     <h2 class="text-2xl text-center mt-10">
       Patrons broadcast paid gigs<br/>Free Agents work jobs anonymously<br/>Arbiters hold funds in escrow and judge outcomes.
     </h2>
