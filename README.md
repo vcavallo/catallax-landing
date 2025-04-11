@@ -1,23 +1,22 @@
 # Catallax Landing Page
 
-![Catallax spontaneous order axe logo](https://vcavallo.nyc3.cdn.digitaloceanspaces.com/images/catallax-logo-1-transparent.png)
 
 ```unset
-            %%            %             
-           +-#    %%%%    *-+           
-         #=:-=+*#%%**%%**+==-+%         
-         *:-=====##=:**=====-:*         
-         *:======##+-**=====-:#         
-         #--===++##+=##++==+--#         
-         %*-=+#  %%##%   #+=-*%         
-           *+%    %**%    #=*           
-            #%    %**%    %             
-                  %**%                  
-                  %**% ,                
-               . '%**   .             
-                  %* % '   
-              ,  #  *  * '              
-                .   %  #              
+                            %%            %             
+                           +-#    %%%%    *-+           
+                         #=:-=+*#%%**%%**+==-+%         
+                         *:-=====##=:**=====-:*         
+                         *:======##+-**=====-:#         
+                         #--===++##+=##++==+--#         
+                         %*-=+#  %%##%   #+=-*%         
+                           *+%    %**%    #=*           
+                            #%    %**%    %             
+                                  %**%                  
+                                  %**% ,                
+                               . '%**   .             
+                                  %* % '   
+                              ,  #  *  * '              
+                                .   %  #              
 ```
 
 ### Schelling point website for the burgeoning Catallax protocol.
