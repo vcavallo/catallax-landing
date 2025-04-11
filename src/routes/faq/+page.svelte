@@ -30,7 +30,10 @@
   description="Get answers to common questions about the Catallax protocol for pseudonymous contractor economies"
 />
 
-<main class="prose dark:prose-invert mx-auto">
+<main class="my-10 prose dark:prose-invert mx-auto">
+<header class="my-10">
+  <h1 class="text-4xl">Frequently Asked Questions</h1>
+</header>
 	<div class="faq-content">
 		<FaqContent />
 	</div>

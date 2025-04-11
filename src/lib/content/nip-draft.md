@@ -1,3 +1,6 @@
+## _This NIP is currently in PR/Draft state at [nostr-protocol/nips](https://github.com/nostr-protocol/nips/pull/1714)_
+
+---
 
 NIP-33400
 ========

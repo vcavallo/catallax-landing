@@ -1,4 +1,6 @@
-_This section is under development_
+## _This page is currently being fleshed-out_
+
+---
 
 ## Limited scope programming tasks 
 

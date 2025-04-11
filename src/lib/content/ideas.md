@@ -82,6 +82,6 @@ A public roadmap will be provided on this site (see below).
 
 ## Links
 
+- [Draft NIP Pull Request](https://github.com/nostr-protocol/nips/pull/1714)
+- [WIP Khatru relay implementation](https://github.com/vcavallo/khatru/tree/trim-kinds) - in the process of incorporating major changes from the original NIP draft, which had way too many Kinds.
 - [Early UI being fully revamped](https://github.com/vcavallo/catallax-ui)
-- [Initial NIP proposal](https://github.com/nostr-protocol/nips/pull/1714) (also being fully revamped after some valuable feedback from fiatjaf
-- [WIP Khatru relay implementation](https://github.com/vcavallo/khatru/tree/trim-kinds) - in the process of incorporating the above feedback.
