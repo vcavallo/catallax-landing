@@ -23,7 +23,7 @@ The patron can shop from dozens of vendors while only trusting one highly-reputa
 
 ## Crowdfunding
 
-With a little imagination, and some integrations with _Kind 9041: Zap Goals_ ("crowdfunding"), one could see a way to crowdfund tasks. Rather than a single patron funding the escrow (and potentially being refunded), many "crowd patrons" could all fund a Zap Goal together, held by the arbiter. Then as usual, if the free agent completes the work, he gets paid. Funds could even be released incrementally, at that various zap goal milestones. But if a refund is due, the arbiter would refund _each_ of the crowd patrons. Clients could provide ergonomic tools for this and arbiters might charge extra to adjudicate crowdfunded tasks (herding cats and all).
+With a little imagination, and some integrations with _[Kind 9041: Zap Goals](https://nostrbook.dev/kinds/9041)_ ("crowdfunding"), one could see a way to crowdfund tasks. Rather than a single patron funding the escrow (and potentially being refunded), many "crowd patrons" could all fund a Zap Goal together, held by the arbiter. Then as usual, if the free agent completes the work, he gets paid. Funds could even be released incrementally, at that various zap goal milestones. But if a refund is due, the arbiter would refund _each_ of the crowd patrons. Clients could provide ergonomic tools for this and arbiters might charge extra to adjudicate crowdfunded tasks (herding cats and all).
 
 ## Open Source Software and Bug Bounties
 
