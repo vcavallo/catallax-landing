@@ -1,5 +1,3 @@
-# Contribute
-
 **This page is a stub, links and details coming soon**
 
 We are very much looking for contributors to help take this over the finish line.

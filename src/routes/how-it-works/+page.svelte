@@ -8,10 +8,11 @@
   image="/success-flowchart.png"
 />
 
-<header class="my-10">
-  <h1 class="text-2xl">Protocol Flow</h1>
-</header>
-<main class="mx-auto w-full">
+<main class="mx-auto container prose dark:prose-invert my-10">
+  <header class="my-10">
+    <h1 class="text-4xl">Protocol Flow</h1>
+  </header>
+
 	<section class="mx-auto container prose dark:prose-invert my-10">
     <p>
     Please refer to the <a href="/nip">NIP</a> for technical details. Here we'll look at the general flow from a higher level with some details elided.
