@@ -11,6 +11,8 @@ Thanks to [Cashu-based wallets](https://github.com/nostr-protocol/nips/blob/mast
 
 **All you need is a web browser.**
 
+-> Test it out -> [Demo Client](https://npub1cyqjvgjver3v9affrr64tmsetxwyf0jf4sumsnmj3zsel5md4ynqku9kka.shakespeare.to/catallax)
+
 Rather than involving blockchains, smart contracts or complicated oracles and voting systems, the Catallax protocol relies on lindy technology: **trust and reputation.**
 
 ---

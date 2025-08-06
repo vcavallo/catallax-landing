@@ -2,13 +2,13 @@
 
 ---
 
-## Programming, design and other digitally-delivered work
+## Programming, design and other digitally-delivered work [🔗](#programming-design-and-other-digitally-delivered-work-)
 
 This is the most obvious use case that comes to mind for most people in this space, so lets get it out of the way immediately and very briefly: A patron wants some software development, design, content writing, etc. work done, they get it delivered digitally, the worker gets paid; this is the straightforward, happy path for the protocol.  
 
 Now for some more creative applications...
 
-## Privacy-protective shipping and fulfillment
+## Privacy-protective shipping and fulfillment [🔗](#privacy-protective-shipping-and-fulfillment-)
 
 There are plenty of items on [Shopstr](https://shopstr.store/) that I would like to buy - and I have! But I don't love leaking my home address to every vendor I come across. Does Catallax solve this?
 
@@ -21,11 +21,11 @@ There are plenty of items on [Shopstr](https://shopstr.store/) that I would like
 
 The patron can shop from dozens of vendors while only trusting one highly-reputable party with his shipping address.
 
-## Crowdfunding
+## Crowdfunding [🔗](#crowdfunding-)
 
 With a little imagination, and some integrations with _[Kind 9041: Zap Goals](https://nostrbook.dev/kinds/9041)_ ("crowdfunding"), one could see a way to crowdfund tasks. Rather than a single patron funding the escrow (and potentially being refunded), many "crowd patrons" could all fund a Zap Goal together, held by the arbiter. Then as usual, if the free agent completes the work, he gets paid. Funds could even be released incrementally, at that various zap goal milestones. But if a refund is due, the arbiter would refund _each_ of the crowd patrons. Clients could provide ergonomic tools for this and arbiters might charge extra to adjudicate crowdfunded tasks (herding cats and all).
 
-## Open Source Software and Bug Bounties
+## Open Source Software and Bug Bounties [🔗](#open-source-software-and-bug-bounties-)
 
 Mostly related to the above. But a few interesting wrinkles.  
 
@@ -39,7 +39,7 @@ The kicker here is that **the free agent _just got paid to contribute to open so
 
 Combine this with the Crowdfunding approach above and we might have just found an additional strategy for funding open source at scale.
 
-## Reputation Bonds
+## Reputation Bonds [🔗](#reputation-bonds-)
 
 It might be tough to bootstrap your career as a free agent, especially if doing so on a fresh nym.  
 
@@ -47,13 +47,13 @@ One approach might be reputation bonds. The free agent could offer to "stake" so
 
 If he completes the work, he gets his bond returned and acquires a nice reputational notch on his belt. Perhaps next time a smaller bond will be okay...
 
-## Underwriters
+## Underwriters [🔗](#underwriters-)
 
 This is almost like a similar-to-above bootstrapping system for arbiters. Second-layer "meta-arbiters" would specialize in judging arbiters themselves. They necessarily must be among the most trustworthy, high-profile individuals in the community. If one of the arbiters they vouch for - or "underwrite" - totally absconds with project funds (or otherwise somehow fails in their duties), the underwriter compensates the affected parties.  
 
 They may either earn a small fee on these interactions, or they might have a personal interest in seeing the system flourish. Sounds like they have a lot of clout so maybe they don't need the money anyway?
 
-## Arbiter Insurance Pools
+## Arbiter Insurance Pools [🔗](#arbiter-insurance-pools-)
 
 Similarly, multiple arbiters could collectively form an insurance pool. Each member contributes a percentage of their fees to the pool. If an arbiter in the pool fails to perform properly, the pool could make whole the affected patrons or free agents. Those with longer positive track records may contribute less while newer arbiters contribute more.
 

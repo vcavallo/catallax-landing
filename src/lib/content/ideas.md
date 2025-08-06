@@ -58,10 +58,11 @@ _Catallax is in active development!_
 
 See the links below for more detail, but briefly:
 
-- An initial relay implementation was briefly live
-- An initial proof-of-concept UI was briefly live
-- Lightning/Cashu integration is _unstarted_
-- GrapeRank integration is _unstarted_
+- A [demo client is up now](https://npub1cyqjvgjver3v9affrr64tmsetxwyf0jf4sumsnmj3zsel5md4ynqku9kka.shakespeare.to/catallax). It has seen some testing-in-production activity with real lightning payments made for completed work.
+- An initial relay implementation exists and was briefly live. At the moment we're seeing how far we can get without any relay-side work...
+- Lightning integration is done-ish but splits are a little buggy
+- Cashu integration is _unstarted_
+- GrapeRank integration is _unstarted_ (but in discussion)
 - Friendly deployment packaging is _unstarted_
 
 A public roadmap will be provided on this site (see below).
@@ -82,6 +83,6 @@ A public roadmap will be provided on this site (see below).
 
 ## Links
 
+- [Demo Client](https://npub1cyqjvgjver3v9affrr64tmsetxwyf0jf4sumsnmj3zsel5md4ynqku9kka.shakespeare.to/catallax)
 - [Draft NIP Pull Request](https://github.com/nostr-protocol/nips/pull/1714)
 - [WIP Khatru relay implementation](https://github.com/vcavallo/khatru/tree/trim-kinds) - in the process of incorporating major changes from the original NIP draft, which had way too many Kinds.
-- [Early UI being fully revamped](https://github.com/vcavallo/catallax-ui)

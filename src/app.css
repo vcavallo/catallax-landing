@@ -123,3 +123,8 @@ a {
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-padding-top: 80px;
+}
+
