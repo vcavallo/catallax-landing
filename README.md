@@ -23,12 +23,12 @@
 
 ## Resources
 
+- [Client Demo](https://npub1cyqjvgjver3v9affrr64tmsetxwyf0jf4sumsnmj3zsel5md4ynqku9kka.shakespeare.to/catallax)
 - [Draft NIP PR](https://github.com/nostr-protocol/nips/pull/1714)
 - Protocol author on Nostr ([Vinney](https://njump.me/npub19ma2w9dmk3kat0nt0k5dwuqzvmg3va9ezwup0zkakhpwv0vcwvcsg8axkl))
   - `npub19ma2w9dmk3kat0nt0k5dwuqzvmg3va9ezwup0zkakhpwv0vcwvcsg8axkl`
   - Use `#catallax` topic tag on Nostr
 - [WIP Khatru relay reference implementation](https://github.com/vcavallo/khatru/tree/trim-kinds)
-- [WIP clickable UI demo](https://github.com/vcavallo/catallax-ui)
 - _GitHub Discussion coming soon_
 
 ---
