@@ -83,6 +83,7 @@ A public roadmap will be provided on this site (see below).
 
 ## Links
 
-- [Demo Client](https://npub1cyqjvgjver3v9affrr64tmsetxwyf0jf4sumsnmj3zsel5md4ynqku9kka.shakespeare.to/catallax)
+- [Live Demo Client](https://npub1cyqjvgjver3v9affrr64tmsetxwyf0jf4sumsnmj3zsel5md4ynqku9kka.shakespeare.to/catallax)
+- [Demo Client Repo](https://github.com/vcavallo/catallax-demo-client)
 - [Draft NIP Pull Request](https://github.com/nostr-protocol/nips/pull/1714)
 - [WIP Khatru relay implementation](https://github.com/vcavallo/khatru/tree/trim-kinds) - in the process of incorporating major changes from the original NIP draft, which had way too many Kinds.
