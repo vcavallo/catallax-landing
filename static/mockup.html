@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catallax Gig Marketplace - UX Mockup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .header-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .reload-link {
+            font-size: 0.85rem;
+            color: #ff6b35;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .reload-link:hover {
+            text-decoration: underline;
+        }
+
+        .wallet-button {
+            position: relative;
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .wallet-button:hover {
+            border-color: #333;
+        }
+
+        .wallet-button.highlight {
+            border-color: #ff6b35;
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+        }
+
+        .wallet-username {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .wallet-balance {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .gigs-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .gig-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.2s;
+        }
+
+        .gig-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .gig-info {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .gig-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        @media (max-width: 640px) {
+            .gig-right {
+                align-items: flex-start;
+                width: 100%;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .header {
+                padding: 1rem;
+            }
+
+            .gig-card {
+                padding: 1rem;
+            }
+
+            .gig-meta {
+                gap: 1rem;
+            }
+
+            .chat-tray {
+                right: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+
+        .gig-description {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .gig-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .gig-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #f8f8f8;
+            padding: 0.4rem 0.75rem;
+            border-radius: 20px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .gig-meta-label {
+            font-weight: 700;
+            color: #333;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .gig-meta-avatar {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .gig-meta-avatar.patron {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .gig-meta-avatar.arbiter {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .gig-meta-avatar.worker {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .gig-meta-value {
+            color: #666;
+            font-weight: 400;
+        }
+
+        .gig-amount {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+        }
+
+        .gig-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .status-funded {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-in-progress {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-proposed {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+
+        .status-crowdfunding {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .status-completed {
+            background: #c3e6cb;
+            color: #155724;
+        }
+
+        .gig-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #ff6b35;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #e55a2b;
+        }
+
+        .btn-primary.highlight {
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #333;
+            border: 1px solid #e0e0e0;
+        }
+
+        .btn-secondary:hover {
+            border-color: #333;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(255, 107, 53, 0);
+            }
+        }
+
+        .pulse-dot {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            width: 12px;
+            height: 12px;
+            background: #ff6b35;
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.3);
+                opacity: 0.7;
+            }
+        }
+
+        .chat-tray {
+            position: fixed;
+            bottom: 0;
+            right: 2rem;
+            width: 350px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .chat-tray.collapsed {
+            height: 50px;
+        }
+
+        .chat-tray.expanded {
+            height: 400px;
+        }
+
+        .chat-header {
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-messages {
+            padding: 1rem;
+            height: 290px;
+            overflow-y: auto;
+        }
+
+        .chat-message {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .chat-message.user {
+            background: #f0f0f0;
+            margin-left: 2rem;
+        }
+
+        .chat-message.patron {
+            background: #e3f2fd;
+            margin-right: 2rem;
+        }
+
+        .chat-sender {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            font-size: 0.85rem;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-body {
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-footer {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        .form-textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .transaction-list {
+            margin-top: 1rem;
+        }
+
+        .transaction-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+        }
+
+        .transaction-item:last-child {
+            border-bottom: none;
+        }
+
+        .transaction-type {
+            font-weight: 600;
+        }
+
+        .transaction-amount.positive {
+            color: #28a745;
+        }
+
+        .transaction-amount.negative {
+            color: #dc3545;
+        }
+
+        .transaction-date {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        .footer {
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #ff6b35;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .crowdfunded-patrons {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .patron-avatars {
+            display: flex;
+        }
+
+        .patron-avatar {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ccc;
+            border: 2px solid #f8f8f8;
+            margin-left: -6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .patron-avatar:first-child {
+            margin-left: 0;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #ff6b35;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .timer-message {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .worker-you {
+            text-decoration: underline;
+            text-decoration-color: #ff6b35;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 2px;
+        }
+
+        .btn {
+            position: relative;
+        }
+
+        .info-box {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            max-width: 400px;
+            background: white;
+            border: 2px solid #ff6b35;
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            z-index: 1001;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .info-box.hidden {
+            transform: translateX(-120%);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .info-box-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-box-title {
+            font-weight: 700;
+            color: #ff6b35;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-box-close {
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            font-size: 1.5rem;
+            line-height: 1;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-box-close:hover {
+            color: #333;
+        }
+
+        .info-box-content {
+            color: #333;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 640px) {
+            .info-box {
+                left: 1rem;
+                right: 1rem;
+                max-width: none;
+                bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="header-title">Gig marketplace UX mockup</div>
+            <a href="javascript:location.reload()" class="reload-link">↻ Reload experience</a>
+        </div>
+        <div id="walletButton" class="wallet-button" style="display: none;">
+            <div class="wallet-username" id="walletUsername"></div>
+            <div class="wallet-balance" id="walletBalance">0 sats</div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div id="gigsList" class="gigs-list"></div>
+    </div>
+
+    <div id="chatTray" class="chat-tray collapsed" style="display: none;">
+        <div class="chat-header" onclick="toggleChat()">
+            <span>Chat with Uncle Moneybags</span>
+            <span>▼</span>
+        </div>
+        <div class="chat-messages">
+            <div class="chat-message user">
+                <div class="chat-sender">You</div>
+                <div>I'd like to work this job</div>
+            </div>
+            <div class="chat-message patron">
+                <div class="chat-sender">Uncle Moneybags</div>
+                <div>You're hired!</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <strong>This is a fake UX mockup and not a functional application.</strong><br>
+        Visit <a href="https://catallax.network" target="_blank">catallax.network</a> to learn more about the actual Catallax protocol.
+    </div>
+
+    <div id="infoBox" class="info-box">
+        <div class="info-box-header">
+            <div class="info-box-title">Info</div>
+            <button class="info-box-close" onclick="closeInfoBox()">×</button>
+        </div>
+        <div class="info-box-content" id="infoBoxContent"></div>
+    </div>
+
+    <script>
+        // State management
+        const state = {
+            isLoggedIn: false,
+            username: '',
+            balance: 0,
+            transactions: [],
+            gigs: [
+                {
+                    id: 1,
+                    patron: 'Uncle Moneybags',
+                    arbiter: 'Vinney',
+                    description: 'Build a client that uses the Catallax NIPs',
+                    amount: 420069,
+                    status: 'funded',
+                    worker: null
+                },
+                {
+                    id: 2,
+                    patron: 'John Doe',
+                    arbiter: 'Judge Dredd',
+                    description: 'Build an iOS app',
+                    amount: 50000000,
+                    status: 'in-progress',
+                    worker: 'Hayek99'
+                },
+                {
+                    id: 3,
+                    patron: 'Matt Odell',
+                    arbiter: 'Miljian',
+                    description: 'Remove caching server requirement from Primal',
+                    amount: 100000,
+                    status: 'proposed',
+                    worker: null
+                },
+                {
+                    id: 4,
+                    patron: '<Crowdfunded>',
+                    arbiter: 'Loki',
+                    description: 'Share un-paywalled archives of all articles on NYTimes.com for a week',
+                    amount: 50000,
+                    goal: 75000,
+                    status: 'crowdfunding',
+                    worker: null,
+                    isCrowdfunded: true
+                }
+            ],
+            currentModal: null,
+            walletHighlighted: false,
+            sendHighlighted: false,
+            fundHighlighted: false,
+            infoBoxClosed: false,
+            currentInfoStep: 'initial',
+            walletClickedOnce: false
+        };
+
+        const infoMessages = {
+            initial: "This is a simple UX mockup to demonstrate a few elements of the Catallax metaprotocol. Click anywhere to get started.",
+            afterLogin: "Because Nostr identities are generated permissionlessly by the user, no KYC nor account custodian is needed. Pure pseudonymity is viable.<br><br>Try applying for a gig.",
+            walletFirstClick: "Thanks to Cashu ecash, you can access bitcoin lightning instantly over Nostr without needing to install a separate wallet or create any accounts. These are real (custodial) lightning satoshis that you can send anywhere.",
+            afterApplying: "You negotiated with the patron and have been accepted. Let's pretend you just did the work and are ready to submit it. Go ahead and submit now.",
+            afterSubmitting: "You just got paid real bitcoin without KYCing, installing a wallet or signing up for any platform's managed account. Now you can send that money anywhere you want - or contribute some of it to the crowdfunded project...",
+            afterCrowdfunding: "A rich open source freedom software economy can support itself through decentralized crowdfunding with permissionless money.<br><br>Get denied for a grant or VC funding? Fuck 'em."
+        };
+
+        // Random username generator
+        const adjectives = ['Swift', 'Brave', 'Clever', 'Bold', 'Wise', 'Quick', 'Silent', 'Mighty'];
+        const nouns = ['Tiger', 'Eagle', 'Wolf', 'Bear', 'Fox', 'Hawk', 'Lion', 'Raven'];
+
+        function generateRandomUsername() {
+            const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+            const noun = nouns[Math.floor(Math.random() * nouns.length)];
+            const num = Math.floor(Math.random() * 100);
+            return `${adj}${noun}${num}`;
+        }
+
+        // Info box management
+        function showInfoBox(step) {
+            const infoBox = document.getElementById('infoBox');
+            const infoContent = document.getElementById('infoBoxContent');
+
+            if (infoMessages[step]) {
+                state.currentInfoStep = step;
+                infoContent.innerHTML = infoMessages[step];
+                state.infoBoxClosed = false;
+                infoBox.classList.remove('hidden');
+            }
+        }
+
+        function closeInfoBox() {
+            const infoBox = document.getElementById('infoBox');
+            state.infoBoxClosed = true;
+            infoBox.classList.add('hidden');
+        }
+
+        function updateInfoBox(step) {
+            // If the info box is closed, reopen it with new content
+            // If it's open, just update the content
+            if (state.infoBoxClosed) {
+                showInfoBox(step);
+            } else if (state.currentInfoStep !== step) {
+                showInfoBox(step);
+            }
+        }
+
+        // Modal management
+        function showModal(content) {
+            const existing = document.querySelector('.modal-overlay');
+            if (existing) existing.remove();
+
+            const overlay = document.createElement('div');
+            overlay.className = 'modal-overlay';
+            overlay.innerHTML = `<div class="modal">${content}</div>`;
+            document.body.appendChild(overlay);
+
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    overlay.remove();
+                }
+            });
+        }
+
+        function closeModal() {
+            const overlay = document.querySelector('.modal-overlay');
+            if (overlay) overlay.remove();
+        }
+
+        // Login/Signup Modal
+        function showLoginModal() {
+            const content = `
+                <div class="modal-header">Welcome to Catallax</div>
+                <div class="modal-body">
+                    <div class="warning">
+                        ⚠️ WARNING: This is a fake UI mockup and is NOT actually connected to Nostr or any real systems.
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <button class="btn btn-primary" onclick="generateAnonymousProfile()">
+                            Generate Anonymous Profile
+                            <span class="pulse-dot"></span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="loginWithNostr()">
+                            Login with Nostr
+                            <span class="pulse-dot"></span>
+                        </button>
+                    </div>
+                </div>
+            `;
+            showModal(content);
+        }
+
+        // Login actions
+        function generateAnonymousProfile() {
+            state.username = generateRandomUsername();
+            state.isLoggedIn = true;
+            closeModal();
+            updateInfoBox('afterLogin');
+            render();
+        }
+
+        function loginWithNostr() {
+            state.username = 'npub1a2b3c4d5e6f7g8h9';
+            state.isLoggedIn = true;
+            closeModal();
+            updateInfoBox('afterLogin');
+            render();
+        }
+
+        // Wallet modal
+        function showWalletModal() {
+            if (!state.isLoggedIn) return;
+
+            // Show info box on first wallet click
+            if (!state.walletClickedOnce) {
+                state.walletClickedOnce = true;
+                updateInfoBox('walletFirstClick');
+            }
+
+            const content = `
+                <div class="modal-header">Bitcoin Ecash Wallet</div>
+                <div class="modal-body">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <div style="font-size: 2rem; font-weight: 700; color: #ff6b35;">
+                            ${state.balance.toLocaleString()} sats
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Selected Mint</label>
+                        <select class="form-select">
+                            <option>mint.gigmarket.net</option>
+                        </select>
+                    </div>
+
+                    <div class="transaction-list">
+                        <h3 style="margin-bottom: 0.75rem; font-size: 1rem;">Transaction History</h3>
+                        ${state.transactions.length === 0 ? '<p style="color: #666; text-align: center; padding: 1rem;">No transactions yet</p>' : ''}
+                        ${state.transactions.map(tx => `
+                            <div class="transaction-item">
+                                <div>
+                                    <div class="transaction-type">${tx.type}</div>
+                                    <div class="transaction-date">${tx.date}</div>
+                                </div>
+                                <div class="transaction-amount ${tx.amount > 0 ? 'positive' : 'negative'}">
+                                    ${tx.amount > 0 ? '+' : ''}${tx.amount.toLocaleString()} sats
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeModal()">Receive</button>
+                    <button id="sendButton" class="btn btn-primary ${state.sendHighlighted ? 'highlight' : ''}"
+                            ${state.balance === 0 && !state.sendHighlighted ? 'disabled' : ''}
+                            onclick="showSendModal()">
+                        Send
+                        ${state.sendHighlighted ? '<span class="pulse-dot"></span>' : ''}
+                    </button>
+                </div>
+            `;
+            showModal(content);
+        }
+
+        // Send modal
+        function showSendModal() {
+            const content = `
+                <div class="modal-header">Send Bitcoin</div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="form-label">Lightning invoice or address</label>
+                        <input type="text" class="form-input" value="theRealMe@lightningaddress.com" readonly>
+                    </div>
+                    <div id="sendStatus" style="text-align: center; padding: 2rem;">
+                        <div class="loading-spinner"></div>
+                        <p style="margin-top: 1rem; color: #666;">Processing payment...</p>
+                    </div>
+                </div>
+            `;
+            showModal(content);
+
+            // Simulate payment processing
+            setTimeout(() => {
+                state.balance = 0;
+                state.transactions.push({
+                    type: 'Send',
+                    amount: -state.transactions[state.transactions.length - 1].amount,
+                    date: new Date().toLocaleDateString()
+                });
+
+                const statusDiv = document.getElementById('sendStatus');
+                if (statusDiv) {
+                    statusDiv.innerHTML = '<div class="success-message">Send complete!</div>';
+                }
+
+                setTimeout(() => {
+                    closeModal();
+                    render();
+                }, 1500);
+            }, 3000);
+        }
+
+        // Apply to gig
+        function applyToGig(gigId) {
+            if (!state.isLoggedIn) return;
+
+            const gig = state.gigs.find(g => g.id === gigId);
+            if (!gig) return;
+
+            // Show chat tray
+            const chatTray = document.getElementById('chatTray');
+            chatTray.style.display = 'block';
+            chatTray.classList.remove('collapsed');
+            chatTray.classList.add('expanded');
+
+            // Update gig status
+            setTimeout(() => {
+                gig.worker = state.username;
+                gig.status = 'in-progress';
+                updateInfoBox('afterApplying');
+                render();
+            }, 2000);
+        }
+
+        // Submit work
+        function submitWork(gigId) {
+            if (!state.isLoggedIn) return;
+
+            const gig = state.gigs.find(g => g.id === gigId);
+            if (!gig) return;
+
+            const content = `
+                <div class="modal-header">Submit Your Work</div>
+                <div class="modal-body">
+                    <p style="margin-bottom: 1rem;">Let the team know your work is ready to review</p>
+                    <div class="form-group">
+                        <label class="form-label">Details</label>
+                        <textarea class="form-textarea" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</textarea>
+                    </div>
+                    <div id="submitStatus"></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                    <button id="submitButton" class="btn btn-primary highlight" onclick="processSubmission(${gigId})">
+                        Submit
+                        <span class="pulse-dot"></span>
+                    </button>
+                </div>
+            `;
+            showModal(content);
+        }
+
+        function processSubmission(gigId) {
+            const statusDiv = document.getElementById('submitStatus');
+            const submitButton = document.getElementById('submitButton');
+
+            // Disable and remove highlight from submit button
+            if (submitButton) {
+                submitButton.disabled = true;
+                submitButton.classList.remove('highlight');
+                const dot = submitButton.querySelector('.pulse-dot');
+                if (dot) dot.remove();
+            }
+
+            statusDiv.innerHTML = '<div class="timer-message">This gig is pending arbiter review... <span id="countdown">5</span></div>';
+
+            let countdown = 5;
+            const interval = setInterval(() => {
+                countdown--;
+                const countdownSpan = document.getElementById('countdown');
+                if (countdownSpan) {
+                    countdownSpan.textContent = countdown;
+                }
+
+                if (countdown === 0) {
+                    clearInterval(interval);
+                    const gig = state.gigs.find(g => g.id === gigId);
+
+                    statusDiv.innerHTML = '<div class="success-message">The team has approved your work and paid you!</div>';
+
+                    setTimeout(() => {
+                        // Update balance and transactions
+                        state.balance += gig.amount;
+                        state.transactions.push({
+                            type: 'Receive',
+                            amount: gig.amount,
+                            date: new Date().toLocaleDateString()
+                        });
+
+                        // Update gig status
+                        gig.status = 'completed';
+
+                        // Highlight wallet and fund button
+                        state.walletHighlighted = true;
+                        state.sendHighlighted = true;
+                        state.fundHighlighted = true;
+
+                        updateInfoBox('afterSubmitting');
+                        closeModal();
+                        render();
+                    }, 2000);
+                }
+            }, 1000);
+        }
+
+        // Fund gig
+        function fundGig(gigId) {
+            if (!state.isLoggedIn) return;
+
+            const gig = state.gigs.find(g => g.id === gigId);
+            if (!gig) return;
+
+            const fundAmount = gig.goal - gig.amount;
+
+            const content = `
+                <div class="modal-header">Fund Gig</div>
+                <div class="modal-body">
+                    <p style="margin-bottom: 1rem;">Contribute to this crowdfunded gig</p>
+                    <div class="form-group">
+                        <label class="form-label">Amount (sats)</label>
+                        <input type="number" class="form-input" value="${fundAmount}" disabled>
+                    </div>
+                    <div style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">
+                        Current: ${gig.amount.toLocaleString()} sats / Goal: ${gig.goal.toLocaleString()} sats
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                    <button class="btn btn-primary highlight" onclick="processFunding(${gigId}, ${fundAmount})">
+                        Contribute
+                        <span class="pulse-dot"></span>
+                    </button>
+                </div>
+            `;
+            showModal(content);
+        }
+
+        function processFunding(gigId, amount) {
+            const gig = state.gigs.find(g => g.id === gigId);
+
+            // Update balance
+            state.balance -= amount;
+
+            // Add transaction
+            state.transactions.push({
+                type: 'Fund Gig',
+                amount: -amount,
+                date: new Date().toLocaleDateString()
+            });
+
+            // Update gig
+            gig.amount += amount;
+            gig.status = 'funded';
+
+            updateInfoBox('afterCrowdfunding');
+            closeModal();
+            render();
+        }
+
+        // Toggle chat
+        function toggleChat() {
+            const chatTray = document.getElementById('chatTray');
+            chatTray.classList.toggle('collapsed');
+            chatTray.classList.toggle('expanded');
+        }
+
+        // Render functions
+        function renderGig(gig) {
+            const isApplicable = gig.id === 1 && gig.status === 'funded' && !gig.worker;
+            const isAssigned = gig.worker === state.username;
+            const canSubmit = isAssigned && gig.status === 'in-progress';
+            const isCrowdfundingActive = gig.id === 4 && gig.status === 'crowdfunding' && state.fundHighlighted;
+            const goalReached = gig.goal && gig.amount >= gig.goal;
+
+            function getInitials(name) {
+                if (name.includes('Crowdfunded')) return '👥';
+                return name.charAt(0).toUpperCase();
+            }
+
+            let patronDisplay = gig.patron;
+            let patronInitials = getInitials(gig.patron);
+            if (gig.isCrowdfunded) {
+                patronDisplay = `
+                    <div class="crowdfunded-patrons">
+                        <span class="gig-meta-value">Crowdfunded</span>
+                        <div class="patron-avatars">
+                            <div class="patron-avatar" style="background: #ff6b6b;">A</div>
+                            <div class="patron-avatar" style="background: #4ecdc4;">B</div>
+                            <div class="patron-avatar" style="background: #45b7d1;">C</div>
+                            <div class="patron-avatar" style="background: #96ceb4;">D</div>
+                        </div>
+                    </div>
+                `;
+                patronInitials = '👥';
+            }
+
+            return `
+                <div class="gig-card">
+                    <div class="gig-header">
+                        <div class="gig-info">
+                            <div class="gig-description">${gig.description}</div>
+                            <div class="gig-meta">
+                                <div class="gig-meta-item">
+                                    <span class="gig-meta-label">Patron</span>
+                                    ${gig.isCrowdfunded ? patronDisplay : `<span class="gig-meta-value">${gig.patron}</span>`}
+                                    <div class="gig-meta-avatar patron">${patronInitials}</div>
+                                </div>
+                                <div class="gig-meta-item">
+                                    <span class="gig-meta-label">Arbiter</span>
+                                    <span class="gig-meta-value">${gig.arbiter}</span>
+                                    <div class="gig-meta-avatar arbiter">${getInitials(gig.arbiter)}</div>
+                                </div>
+                                ${gig.worker ? `
+                                    <div class="gig-meta-item">
+                                        <span class="gig-meta-label">Worker</span>
+                                        <span class="gig-meta-value ${isAssigned ? 'worker-you' : ''}">${gig.worker}${isAssigned ? ' (you)' : ''}</span>
+                                        <div class="gig-meta-avatar worker">${getInitials(gig.worker)}</div>
+                                    </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                        <div class="gig-right">
+                            <div class="gig-amount">
+                                ${gig.goal ? `${gig.amount.toLocaleString()} / ${gig.goal.toLocaleString()}` : gig.amount.toLocaleString()} sats
+                            </div>
+                            ${goalReached ? '<div style="color: #28a745; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Goal reached!</div>' : ''}
+                            <span class="gig-status status-${gig.status.replace(' ', '-')}">${gig.status}</span>
+                        </div>
+                    </div>
+                    ${state.isLoggedIn ? `
+                        <div class="gig-actions">
+                            ${isApplicable ? `
+                                <button class="btn btn-primary highlight" onclick="applyToGig(${gig.id})">
+                                    Apply
+                                    <span class="pulse-dot"></span>
+                                </button>
+                            ` : ''}
+                            ${canSubmit ? `
+                                <button class="btn btn-primary" onclick="submitWork(${gig.id})">
+                                    Submit Work
+                                    <span class="pulse-dot"></span>
+                                </button>
+                            ` : ''}
+                            ${isCrowdfundingActive ? `
+                                <button class="btn btn-primary highlight" onclick="fundGig(${gig.id})">
+                                    Fund
+                                    <span class="pulse-dot"></span>
+                                </button>
+                            ` : ''}
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }
+
+        function render() {
+            // Update wallet button
+            const walletButton = document.getElementById('walletButton');
+            const walletUsername = document.getElementById('walletUsername');
+            const walletBalance = document.getElementById('walletBalance');
+
+            if (state.isLoggedIn) {
+                walletButton.style.display = 'block';
+                walletUsername.textContent = state.username;
+                walletBalance.textContent = `${state.balance.toLocaleString()} sats`;
+
+                if (state.walletHighlighted) {
+                    walletButton.classList.add('highlight');
+                    if (!walletButton.querySelector('.pulse-dot')) {
+                        const dot = document.createElement('span');
+                        dot.className = 'pulse-dot';
+                        walletButton.appendChild(dot);
+                    }
+                } else {
+                    walletButton.classList.remove('highlight');
+                    const dot = walletButton.querySelector('.pulse-dot');
+                    if (dot) dot.remove();
+                }
+            }
+
+            // Update gigs list
+            const gigsList = document.getElementById('gigsList');
+            gigsList.innerHTML = state.gigs.map(gig => renderGig(gig)).join('');
+        }
+
+        // Click handler for login requirement
+        function handleClick(e) {
+            if (!state.isLoggedIn) {
+                e.preventDefault();
+                e.stopPropagation();
+                showLoginModal();
+                return false;
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            render();
+
+            // Show initial info box
+            showInfoBox('initial');
+
+            // Add click handler for wallet button
+            document.getElementById('walletButton').addEventListener('click', (e) => {
+                if (!state.isLoggedIn) {
+                    handleClick(e);
+                } else {
+                    showWalletModal();
+                }
+            });
+
+            // Add global click handler when not logged in
+            document.addEventListener('click', (e) => {
+                if (!state.isLoggedIn) {
+                    // Check if click is on a modal, info box, or their children
+                    const modal = e.target.closest('.modal');
+                    const infoBox = e.target.closest('.info-box');
+                    if (modal || infoBox) return;
+
+                    handleClick(e);
+                }
+            }, true);
+        });
+    </script>
+</body>
+</html>
+
