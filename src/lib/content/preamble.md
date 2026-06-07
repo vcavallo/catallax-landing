@@ -7,11 +7,12 @@ Anybody on Earth can participate in Catallax and nobody can be stopped from doin
 - **Free Agent**: Applies for available tasks, delivers work and gets paid.
 
 Arbiter advertisements, Task postings and their eventual resolutions are posted on the [Nostr](https://nostr.com/) protocol while payments are handled via [Cashu ecash](https://cashu.space/) and [Lightning](https://lightning.network/).  
-Thanks to [Cashu-based wallets](https://github.com/nostr-protocol/nips/blob/master/60.md) and Nostr's permissionless identity creation, anyone (namedoxxed or nym) can participate in the Catallax economy without conforming to [KYC or AML](https://www.dowjones.com/professional/risk/resources/glossary/kyc-vs-aml) nor first having a Bitcion or Lightning wallet configured.  
+Thanks to [Cashu-based wallets](https://github.com/nostr-protocol/nips/blob/master/60.md) and Nostr's permissionless identity creation, anyone (namedoxxed or nym) can participate in the Catallax economy without conforming to [KYC or AML](https://www.dowjones.com/professional/risk/resources/glossary/kyc-vs-aml) nor first having a Bitcion or Lightning wallet configured.
 
 **All you need is a web browser.**
 
--> Test it out -> [Reference Client](https://catallax-reference-client.netlify.app/catallax)
+- Test it out -> [Hosted Catallax Reference Client](https://catallax-reference-client.netlify.app/catallax)
+- [grantless.org](https://grantless.org), a curated version of catallax, for crowdfunding projects
 
 Rather than involving blockchains, smart contracts or complicated oracles and voting systems, the Catallax protocol relies on lindy technology: **trust and reputation.**
 

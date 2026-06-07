@@ -9,12 +9,14 @@ Speech is guaranteed by open protocols, but reach is not.
 
 1. Arbiters advertise themselves, including what type of work they are proficient at judging, their fee, and any terms and conditions.
 2. Patrons create task proposals with detailed descriptions of what they want done and how much the gig pays.
-4. Patrons **finalize tasks by funding the escrow**
-  - By "fund the escrow" we just mean "send bitcoin or ecash to the Arbiter's wallet". Remember, we're keeping the base layer simple.
-5. Free Agents can apply for tasks and discuss with the Patron
-6. The Patron assigns a Free Agent to a task
-7. Free Agents get to work. When done, they submit the final product to the Arbiter for this gig
-8. The Arbiter judges the work. If it meets the requirement, the Free Agent is paid. If not, the money is refunded to the Patron.
+3. Patrons **finalize tasks by funding the escrow**
+
+- By "fund the escrow" we just mean "send bitcoin or ecash to the Arbiter's wallet". Remember, we're keeping the base layer simple.
+
+1. Free Agents can apply for tasks and discuss with the Patron
+2. The Patron assigns a Free Agent to a task
+3. Free Agents get to work. When done, they submit the final product to the Arbiter for this gig
+4. The Arbiter judges the work. If it meets the requirement, the Free Agent is paid. If not, the money is refunded to the Patron.
 
 For more details, see [How it Works](/how-it-works).
 
@@ -41,8 +43,9 @@ To avoid that, we will endeavour to:
 - The above, taken all together, imply that fully pseudonymous interaction will be feasible.
 - Thought will be given to Tor compatibility as appropriate.
 
-
 ### Trust and Reputation
+
+[grantless.org](https://grantless.org) Is starting to integrate GrapeRank and Decetralized Lists with Catallax.
 
 - TODO: Discussion of GrapeRank
 - TODO: List all the known places where bad actors could do bad things and their mitigations (spoiler alert: it's mostly the Arbiter who can scam people, and we've already capitulated that Arbiter trust will be paramount. Pick your Arbiter well and appreciate that their fee is your safety!)
@@ -59,15 +62,15 @@ _Catallax is in active development!_
 See the links below for more detail, but briefly:
 
 - A [reference client is up now](https://catallax-reference-client.netlify.app/catallax). It has seen some testing-in-production activity with real lightning payments made for completed work.
+- [grantless.org](https://grantless.org) Is a more narrowly-focused, _curated_ version of catallax to demonstrate crowdfunding open source software or other projects.
 - An initial relay implementation exists and was briefly live. At the moment we're seeing how far we can get without any relay-side work...
-- Lightning integration is done-ish but splits are a little buggy
+- Lightning integration is done, but splits on payout are a little buggy.
 - Cashu integration is _unstarted_
-- GrapeRank integration is _unstarted_ (but in discussion)
 - Friendly deployment packaging is _unstarted_
 
 A public roadmap will be provided on this site (see below).
 
-## TODO for this site:
+## TODO for this site
 
 - [ ] Create a github project and display its tasks here via api integration (Public roadmap)
 - [ ] Include citations from the literature that inspired this project
@@ -84,6 +87,7 @@ A public roadmap will be provided on this site (see below).
 ## Links
 
 - [Live Reference Client](https://catallax-reference-client.netlify.app/catallax)
+- [grantless.org OSS Funding app](https://grantless.org)
 - [Demo Client Repo](https://github.com/vcavallo/catallax-reference-client)
 - [Draft NIP Pull Request](https://github.com/nostr-protocol/nips/pull/1714)
 - [WIP Khatru relay implementation](https://github.com/vcavallo/khatru/tree/trim-kinds) - in the process of incorporating major changes from the original NIP draft, which had way too many Kinds.
