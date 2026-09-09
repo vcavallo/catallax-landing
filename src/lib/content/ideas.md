@@ -34,7 +34,11 @@ To avoid that, we will endeavour to:
 - Optionally include a Cashu mint in the above.
 - Optionally include [GrapeRank WoT](https://brainstorm.world/what-is-wot) in the above.
 
+That said, all works published by this author run point-of-view-based web-of-trust deeply into the heart of the clients. The upshot is any visitor can bring their own trust graph and need not rely on the defaults they find.
+
 ### Pseudonymity and user-proficiency spectrum respected
+
+The currently-live examples of catallax sit somewhere along the way towards the ideal described below.
 
 - The protocol runs over nostr, but we will strive to hide these technicaliities at first
   - The ideal implementation will include simple onboarding such that a non-Nostr-user who just wants to participate in Catallax can get a Nostr identity and Cashu wallet right away via a Catallax client.
@@ -53,7 +57,8 @@ Game theorists and red-teamers are invited to find the remaining holes.
 
 ### Catallax will be built on Catallax
 
-- To every extent possible, once an MVP is ready and as budget allows, work on Catallax relay implementations, clients, Cashu integrations and GrapeRank integrations will be advertised as Catallax tasks for others to pick up!
+- ~~To every extent possible, once an MVP is ready and as budget allows, work on Catallax relay implementations, clients, Cashu integrations and GrapeRank integrations will be advertised as Catallax tasks for others to pick up!~~
+- We've put up bug bounties and feature requests for the catallax reference client, merged PRs (some from AI agents) and paid contributors, all using catallax. Sick.
 
 ## Where things stand
 
@@ -63,7 +68,7 @@ _As of September 2026._
 - **Trust:** both clients read GrapeRank scores and decentralized lists, with [Brainstorm](https://brainstorm.world) as the first provider of trusted assertions. Anyone can compute their own point of view and any client can choose a different provider.
 - **Payments:** lightning, as NIP-57 zaps, so every escrow deposit and every payout has a public receipt. Cashu is _unstarted_; NIP-60 wallets remain the plan for people who arrive with no lightning at all.
 - **Relays:** none required. The protocol works on any relay that stores the three kinds, and we got further without relay-side work than we expected to. The early relay implementation is retired.
-- **Packaging:** a one-binary deployment of client, relay and optional mint is still the aspiration and still _unstarted_.
+- **Packaging:** a one-binary deployment of client, relay and optional cashu mint is still the aspiration and still _unstarted_.
 
 ## Links
 
@@ -71,4 +76,4 @@ _As of September 2026._
 - [Canvasstr](https://canvasstr.org) · [source](https://github.com/vcavallo/canvasstr) · [how it extends Catallax](https://github.com/vcavallo/canvasstr/blob/master/PROTOCOL.md)
 - [Reference client](https://catallax-reference-client.netlify.app/catallax) · [source](https://github.com/vcavallo/catallax-reference-client)
 - [The NIP](/nip) · [draft pull request](https://github.com/nostr-protocol/nips/pull/1714)
-- [Brainstorm](https://brainstorm.world), where points of view are computed
+- [Brainstorm](https://brainstorm.world), a reliable provider for computing web of trust. Feel free to bring your own trust scores.
