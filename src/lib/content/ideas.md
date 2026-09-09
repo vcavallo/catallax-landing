@@ -32,7 +32,7 @@ To avoid that, we will endeavour to:
 - Provide a relay + client package as a dead-simple binary for easy deployment by anyone.
   - The maintainers of this site might run an instance to help bootstrap, but it should be trivial for anyone else to do the same.
 - Optionally include a Cashu mint in the above.
-- Optionally include [GrapeRank WoT](https://grapevine-brainstorm.vercel.app/#/about/graperank) in the above.
+- Optionally include [GrapeRank WoT](https://brainstorm.world/what-is-wot) in the above.
 
 ### Pseudonymity and user-proficiency spectrum respected
 
@@ -45,49 +45,30 @@ To avoid that, we will endeavour to:
 
 ### Trust and Reputation
 
-[grantless.org](https://grantless.org) Is starting to integrate GrapeRank and Decetralized Lists with Catallax.
+Both [Grantless](https://grantless.org) and [Canvasstr](https://canvasstr.org) now lean on [GrapeRank](https://brainstorm.world/what-is-wot) web-of-trust scores and [decentralized lists](https://nostrhub.io/naddr1qvzqqqrcvypzpef89h53f0fsza2ugwdc3e54nfpun5nxfqclpy79r6w8nxsk5yp0qythwumn8ghj7erpwe5kgtnwdaehgu339e3k7mf0qqfkgetrv4h8gunpd35h5ety94kxjum5wv4px7v6) instead of any central reputation system. A viewer's own point of view decides which patrons, arbiters and workers they see first; nobody's point of view can stop anyone else from publishing.
 
-- TODO: Discussion of GrapeRank
-- TODO: List all the known places where bad actors could do bad things and their mitigations (spoiler alert: it's mostly the Arbiter who can scam people, and we've already capitulated that Arbiter trust will be paramount. Pick your Arbiter well and appreciate that their fee is your safety!)
-- Game theorists and red-teamers are invited to help plug these holes
+The one place a Catallax user must extend real trust is the Arbiter: they hold the escrow, and they could run off with it. We've capitulated on that up front. Pick your Arbiter well, and appreciate that their fee is your safety. Web-of-trust scores and a public record of every judgement (each resolution is a signed event with a payment receipt beside it) are how that choice gets easier over time.
+
+Game theorists and red-teamers are invited to find the remaining holes.
 
 ### Catallax will be built on Catallax
 
 - To every extent possible, once an MVP is ready and as budget allows, work on Catallax relay implementations, clients, Cashu integrations and GrapeRank integrations will be advertised as Catallax tasks for others to pick up!
 
-## Current Status
+## Where things stand
 
-_Catallax is in active development!_
+_As of September 2026._
 
-See the links below for more detail, but briefly:
-
-- A [reference client is up now](https://catallax-reference-client.netlify.app/catallax). It has seen some testing-in-production activity with real lightning payments made for completed work.
-- [grantless.org](https://grantless.org) Is a more narrowly-focused, _curated_ version of catallax to demonstrate crowdfunding open source software or other projects.
-- An initial relay implementation exists and was briefly live. At the moment we're seeing how far we can get without any relay-side work...
-- Lightning integration is done, but splits on payout are a little buggy.
-- Cashu integration is _unstarted_
-- Friendly deployment packaging is _unstarted_
-
-A public roadmap will be provided on this site (see below).
-
-## TODO for this site
-
-- [ ] Create a github project and display its tasks here via api integration (Public roadmap)
-- [ ] Include citations from the literature that inspired this project
-- [ ] include easy "follow me on nostr" link
-- [ ] Fill out mentions of GrapeRank above
-- [ ] write more on the importance of pseudonymity?
-
-## Questions Being Explored
-
-- Should the cashu mint be with the relay/"instance" or the escrow arbiter?
-- is Cashu a fallback from lighting, or the only option?
-- can a patron choose a different mint or have to use the arbiter's (or relay's...) mint?
+- **Live and used:** [Grantless](https://grantless.org) and [Canvasstr](https://canvasstr.org) both run on the protocol with real lightning payments between real people. The reference client is up and exercises the whole NIP.
+- **Trust:** both clients read GrapeRank scores and decentralized lists, with [Brainstorm](https://brainstorm.world) as the first provider of trusted assertions. Anyone can compute their own point of view and any client can choose a different provider.
+- **Payments:** lightning, as NIP-57 zaps, so every escrow deposit and every payout has a public receipt. Cashu is _unstarted_; NIP-60 wallets remain the plan for people who arrive with no lightning at all.
+- **Relays:** none required. The protocol works on any relay that stores the three kinds, and we got further without relay-side work than we expected to. The early relay implementation is retired.
+- **Packaging:** a one-binary deployment of client, relay and optional mint is still the aspiration and still _unstarted_.
 
 ## Links
 
-- [Live Reference Client](https://catallax-reference-client.netlify.app/catallax)
-- [grantless.org OSS Funding app](https://grantless.org)
-- [Demo Client Repo](https://github.com/vcavallo/catallax-reference-client)
-- [Draft NIP Pull Request](https://github.com/nostr-protocol/nips/pull/1714)
-- [WIP Khatru relay implementation](https://github.com/vcavallo/khatru/tree/trim-kinds) - in the process of incorporating major changes from the original NIP draft, which had way too many Kinds.
+- [Grantless](https://grantless.org) · [source](https://github.com/vcavallo/grantless)
+- [Canvasstr](https://canvasstr.org) · [source](https://github.com/vcavallo/canvasstr) · [how it extends Catallax](https://github.com/vcavallo/canvasstr/blob/master/PROTOCOL.md)
+- [Reference client](https://catallax-reference-client.netlify.app/catallax) · [source](https://github.com/vcavallo/catallax-reference-client)
+- [The NIP](/nip) · [draft pull request](https://github.com/nostr-protocol/nips/pull/1714)
+- [Brainstorm](https://brainstorm.world), where points of view are computed

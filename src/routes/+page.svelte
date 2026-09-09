@@ -18,6 +18,9 @@
     <h2 class="text-2xl text-center mt-0">
       Everyone wins.
     </h2>
+    <blockquote class="prose dark:prose-invert mx-auto mt-8 max-w-2xl text-center italic">
+      Friedrich Hayek derived the word <span class="not-italic">catallax</span> from the Greek verb <span class="not-italic">katallasso</span> (καταλλάσσω), which meant not only "to exchange" but also "to admit in the community" and "to change from enemy into friend".
+    </blockquote>
     <div class="w-40 h-40 mx-auto">
       <img src="https://vcavallo.nyc3.cdn.digitaloceanspaces.com/images/catallax-logo-1-transparent.png" />
     </div>
@@ -31,12 +34,11 @@
     <section>
       <h2>Sections</h2>
       <ul>
+        <li><a href="#built-on-catallax">Built on Catallax</a></li>
         <li><a href="#protocols-over-platforms">Protocols Over Platforms</a></li>
         <li><a href="#how-it-works">Overview of How it Works</a></li>
         <li><a href="#principles">Principles</a></li>
-        <li><a href="#current-status">Current Status</a></li>
-        <li><a href="#todo-for-this-site">Evolution of this Site</a></li>
-        <li><a href="#questions-being-explored">Areas of Exploration</a></li>
+        <li><a href="#where-things-stand">Where Things Stand</a></li>
         <li><a href="#links">Links</a></li>
       </ul>
     </section>
