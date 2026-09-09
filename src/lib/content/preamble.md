@@ -13,7 +13,7 @@ Thanks to [Cashu-based wallets](https://github.com/nostr-protocol/nips/blob/mast
 
 - Test it out -> [Hosted Catallax Reference Client](https://catallax-reference-client.netlify.app/catallax)
 - [grantless.org](https://grantless.org), a curated version of catallax, for crowdfunding projects
-- [canvasstr.org](https://canvasstr.org), another app built on top of catallax, where canvassers get paid to help curate decentralized lists, tag nostr profiles and notes, and build the lexiconomy
+- [canvasstr.org](https://canvasstr.org), yet another specialized client that uses the generic catallax protocol for a specific goal: canvassers get paid to help curate decentralized lists, tag nostr profiles and notes, and build the lexiconomy
 
 Rather than involving blockchains, smart contracts or complicated oracles and voting systems, the Catallax protocol relies on lindy technology: **trust and reputation.**
 
