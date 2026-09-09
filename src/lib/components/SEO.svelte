@@ -2,8 +2,8 @@
   export let title = 'Catallax - A Protocol for Pseudonymous Contract Work Economies';
   export let description = 'Catallax is an open protocol that enables pseudonymous contract work economies. It runs over Nostr, Bitcoin and Cashu ecash for censorship-resistant communications and permissionless payments.';
   export let url = 'https://catallax.network';
-  export let wideImage = '/catallax-social-share-1200-630.png';
-  export let narrowerImage = '/catallax-social-share-800-418.png';
+  export let wideImage = 'https://catallax.network/catallax-social-share-1200-630.png';
+  export let narrowerImage = 'https://catallax.network/catallax-social-share-800-418.png';
 </script>
 
 <svelte:head>

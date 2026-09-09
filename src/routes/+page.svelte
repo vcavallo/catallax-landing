@@ -16,7 +16,7 @@
       Patrons broadcast paid gigs<br/>Free Agents work jobs anonymously<br/>Arbiters hold funds in escrow and judge outcomes.
     </h2>
     <h2 class="text-2xl text-center mt-0">
-      Everyone wins.
+      Suffer no gatekeeper.
     </h2>
     <blockquote class="prose dark:prose-invert mx-auto mt-8 max-w-2xl text-center italic">
       Friedrich Hayek derived the word <span class="not-italic">catallax</span> from the Greek verb <span class="not-italic">katallasso</span> (καταλλάσσω), which meant not only "to exchange" but also "to admit in the community" and "to change from enemy into friend".
